@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ site_title }}</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display" >
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ theme_url }}/style.css">
+</head>
+
+<body>
+    <div id="main" class="container">
+        <div class="row my-card justify-content-center">
+            <div class="col-lg-4 photo-bg" style="background-image: url({% if meta.photo %}{{ meta.photo }}{% else %}{{ theme_url }}/assets/background.jpg{% endif %});"></div>
+            <div class="col-lg-8 card">
+                <h1>{% if meta.welcome %}{{ meta.welcome }}{% else %}{{ site_title }}{% endif %}</h1>
+                {{ content }}
+                <p>Just let 'em send the ravens...</p>
+                <a href="mailto:{{ meta.email }}" class="btn btn-primary mt-2">Send a Raven</a>
+                <h4 class="mt-4">or, keep your eyes on</h4>
+                <ul class="social mt-1">
+				{% for link,icon in meta.social %}
+                    <li><a href="{{ link }}"><i class="fa fa-{{ icon }} " aria-hidden="true"></i></a></li>
+                {% endfor %}
+				</ul>
+            </div>
+        </div>
+        <div class="footer">
+            <footer class="mt-3">
+                <p>&copy; {{ site_title }} - Design by <a href="http://m.creatrix.us">Mamun Srizon</a>  | Powered By: <a href="https://besrourms.github.io">Mohamed Safouan Besrour</a></p>
+            </footer>
+
+        </div>
+    </div>
+    <script defer src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</body>
+</html>
