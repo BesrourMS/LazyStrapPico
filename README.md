@@ -1,5 +1,5 @@
 # LazyStrapPico
-Free Responsive Minimal Bootstrap Theme For Pico CMS
+Free Responsive Minimal Bootstrap Theme For Pico CMS inspired from [LazyStrap](https://github.com/srizon/LazyStrap)
 
 Download the lazystrap folder, extract it to the themes folder of your Pico installation, and change the following setting within your config.php:
 
